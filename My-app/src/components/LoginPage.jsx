@@ -23,6 +23,8 @@ const LoginPage = () => {
   // Handle Google Login
   const handleGoogleLogin = async () => {
     try {
+      const provider = googleProvider;
+      provider.setCustomParameters({ prompt: "select_account" }); // Forces account selection
       await signInWithPopup(auth, googleProvider);
       navigate("/dashboard");
     } catch (error) {
