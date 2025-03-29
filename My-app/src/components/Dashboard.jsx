@@ -1,6 +1,6 @@
 import { auth } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
-
+import "../styles/LoginPage.css";
 const Dashboard = () => {
   const navigate = useNavigate();
 
